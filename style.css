@@ -349,6 +349,7 @@ header {
 }
 .app .content .details .images{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
 }
@@ -898,6 +899,7 @@ footer .content .author-others .store {
 footer .content .author-others .store .images {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 footer .content .author-others .store .images img {
     max-width: 200px;
