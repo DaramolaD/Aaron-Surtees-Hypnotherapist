@@ -18,7 +18,7 @@ li {
 }
 header {
     position: fixed;
-    background-color: rgba(0, 28, 39, 0.5);;
+    background-color: #001c26;
     width: 100%;
     top: 0px;
     left: 0px;
@@ -102,7 +102,7 @@ header {
     max-width: 90%;
     margin: 0px auto;
 }
-.nav-list {
+.nav-list, .nav-item-list {
     display: flex;
     gap: 50px;
     align-items: center;
@@ -118,6 +118,7 @@ header {
 .nav-list .item-list img {
     width: 25px;
 }
+.menu-icon { display: none; }
 
 .brands {
     background: #001C27;
@@ -949,15 +950,19 @@ footer .content .author-others p{
     }
 }
 @media only screen and (max-width: 910px) {
+    .nav-item-list { gap: 30px; }
+    /* .nav-list .item-list .login {font-size: 18px;} */
     .contact .content {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
+@media only screen and (max-width: 800px) {
+    .logo { max-width: 150px;}
+    .nav-list .item-list .login {font-size: 18px;}
+}
 @media only screen and (max-width: 768px) {
-    .logo {
-        max-width: 150px;
-    }
+    .logo { max-width: 140px; }
     .nav-list .item-list .login {
         font-size: 18px;
     }
@@ -966,6 +971,26 @@ footer .content .author-others p{
     }
     .nav-list .item-list img {
         width: 20px;
+    }
+    .nav-item-list-cont {
+        position: absolute;
+        top: 100px;
+        padding: 20px;
+        left: -1000px;
+        width: 100%;
+        background-color: #001c26;
+        opacity: 0;
+        transition: 0.5s all ease-in-out;
+    }
+    .activeCont { 
+        display: block;
+        left: 0px;
+        opacity: 1; 
+    }
+    .nav-item-list { flex-direction: column; }
+    .menu-icon { 
+        display: inline-block;
+        cursor: pointer;
     }
     .brands .brand-items {
         width: 100%;
